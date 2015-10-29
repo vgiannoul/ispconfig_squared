@@ -1,6 +1,6 @@
  body{
   	padding-top: 50px;
-  	background: none;
+  	background: #F0F0F0;
     font-family: "Ubuntu", Helvetica,Arial,sans-serif;
   }
 
@@ -143,9 +143,9 @@ table.list {
   }
 
   table.list th {
-    background-color: #4C4949 !important;
-    color: #fff;
-    font-weight: 400;
+
+    color: rgba(22,24,27,.54);
+    font-weight: 700;
   }
   table.list th,
   table.list td {
@@ -174,14 +174,19 @@ table.list > tfoot > tr > th,
 table.list > thead > tr > td,
 table.list > tbody > tr > td,
 table.list > tfoot > tr > td {
-  padding: 8px;
+  padding: 8px 15px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
+
+table.list > thead > tr.caption{
+  border-bottom: 2px solid rgba(22,24,27,.06);
+}
+
 table.list > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid rgba(22,24,27,.06);
 }
 table.list > caption + thead > tr:first-child > th,
 table.list > colgroup + thead > tr:first-child > th,
@@ -192,7 +197,7 @@ table.list > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
 table.list > tbody + tbody {
-  border-top: 2px solid #ddd;
+  border: 1px solid rgba(22,24,27,.06);
 }
 table.list table.list {
   background-color: #fff;
@@ -206,7 +211,7 @@ table.list-condensed > tfoot > tr > td {
   padding: 5px;
 }
 table.list {
-  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px -1px rgba(22,24,27,.26);
 }
 table.list > thead > tr > th,
 table.list > tbody > tr > th,
@@ -214,11 +219,11 @@ table.list > tfoot > tr > th,
 table.list > thead > tr > td,
 table.list > tbody > tr > td,
 table.list > tfoot > tr > td {
-  border: 1px solid #ddd;
+  border: 1px solid rgba(22,24,27,.06);
 }
 table.list > thead > tr > th,
 table.list > thead > tr > td {
-  border-bottom-width: 2px;
+      border-bottom-width: 2px;
 }
 table.list-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
@@ -405,15 +410,15 @@ table.list-responsive {
 }
 .panel > table.list:first-child,
 .panel > table.list-responsive:first-child > table.list:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
 }
 .panel > table.list:first-child > thead:first-child > tr:first-child,
 .panel > table.list-responsive:first-child > table.list:first-child > thead:first-child > tr:first-child,
 .panel > table.list:first-child > tbody:first-child > tr:first-child,
 .panel > table.list-responsive:first-child > table.list:first-child > tbody:first-child > tr:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
 }
 .panel > table.list:first-child > thead:first-child > tr:first-child td:first-child,
 .panel > table.list-responsive:first-child > table.list:first-child > thead:first-child > tr:first-child td:first-child,
@@ -423,7 +428,7 @@ table.list-responsive {
 .panel > table.list-responsive:first-child > table.list:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > table.list:first-child > tbody:first-child > tr:first-child th:first-child,
 .panel > table.list-responsive:first-child > table.list:first-child > tbody:first-child > tr:first-child th:first-child {
-  border-top-left-radius: 3px;
+  border-top-left-radius: none;
 }
 .panel > table.list:first-child > thead:first-child > tr:first-child td:last-child,
 .panel > table.list-responsive:first-child > table.list:first-child > thead:first-child > tr:first-child td:last-child,
@@ -433,19 +438,19 @@ table.list-responsive {
 .panel > table.list-responsive:first-child > table.list:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > table.list:first-child > tbody:first-child > tr:first-child th:last-child,
 .panel > table.list-responsive:first-child > table.list:first-child > tbody:first-child > tr:first-child th:last-child {
-  border-top-right-radius: 3px;
+  border-top-right-radius: none;
 }
 .panel > table.list:last-child,
 .panel > table.list-responsive:last-child > table.list:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: none;
+  border-bottom-left-radius: none;
 }
 .panel > table.list:last-child > tbody:last-child > tr:last-child,
 .panel > table.list-responsive:last-child > table.list:last-child > tbody:last-child > tr:last-child,
 .panel > table.list:last-child > tfoot:last-child > tr:last-child,
 .panel > table.list-responsive:last-child > table.list:last-child > tfoot:last-child > tr:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: none;
+  border-bottom-left-radius: none;
 }
 .panel > table.list:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > table.list-responsive:last-child > table.list:last-child > tbody:last-child > tr:last-child td:first-child,
@@ -455,7 +460,7 @@ table.list-responsive {
 .panel > table.list-responsive:last-child > table.list:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > table.list:last-child > tfoot:last-child > tr:last-child th:first-child,
 .panel > table.list-responsive:last-child > table.list:last-child > tfoot:last-child > tr:last-child th:first-child {
-  border-bottom-left-radius: 3px;
+  border-bottom-left-radius: none;
 }
 .panel > table.list:last-child > tbody:last-child > tr:last-child td:last-child,
 .panel > table.list-responsive:last-child > table.list:last-child > tbody:last-child > tr:last-child td:last-child,
@@ -465,7 +470,7 @@ table.list-responsive {
 .panel > table.list-responsive:last-child > table.list:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > table.list:last-child > tfoot:last-child > tr:last-child th:last-child,
 .panel > table.list-responsive:last-child > table.list:last-child > tfoot:last-child > tr:last-child th:last-child {
-  border-bottom-right-radius: 3px;
+  border-bottom-right-radius: none;
 }
 .panel > .panel-body + table.list,
 .panel > .panel-body + table.list-responsive,
@@ -536,7 +541,7 @@ table.list-responsive {
 
 
 input{
-    border-radius: 3px;
+    border-radius: none;
   border: 1px solid silver;
   height: 27px;
 }
